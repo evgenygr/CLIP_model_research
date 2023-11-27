@@ -1,0 +1,5 @@
+.env.local
+.env
+stpx_dataset
+.ipynb_checkpoints
+.idea

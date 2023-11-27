@@ -1,0 +1,18 @@
+[
+  {
+    "description": "a data-centric master-vector",
+    "filename": "data_centric_master_vector.txt"
+  },
+  {
+    "description": "PROMPT EMBEDDING: visually appealing photo",
+    "filename": "prompt_1.txt"
+  },
+  {
+    "description": "PROMPT EMBEDDING: a professionally-looking photo with nice composition that is worth placing into a photobook",
+    "filename": "prompt_2.txt"
+  },
+  {
+    "description": "NEGATIVE PROMPT EMBEDDING: a picture that is not visually appealing",
+    "filename": "prompt_3.txt"
+  }
+]

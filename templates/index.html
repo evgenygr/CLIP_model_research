@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>File Upload Example</h1>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file1" accept=".jpg, .jpeg, .png, .gif">
+    <br><br>
+    <input type="file" name="file2" accept=".jpg, .jpeg, .png, .gif">
+    <br><br>
+    <label for="dropdown">Select a Master-vector:</label>
+    <select id="dropdown" name="selected_string">
+      {% for value in string_values %}
+        <option value="{{ value }}">{{ value }}</option>
+      {% endfor %}
+    </select>
+    <br><br>
+    <input type="submit" value="Upload Files">
+  </form>
+</body>
+</html>
