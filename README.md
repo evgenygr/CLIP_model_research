@@ -15,8 +15,8 @@ should classify 5 of those photos as "bad". Long story short, classification doe
 need to assign a numeric ratings to photos.
 
 Photos can be rated taking into account its human-understandable content (semantics), jpeg compression
-quality, color spectrum. Perhaps, there are characteristics of a photo, but most probably all of them may
-be assessed with some traditional numeric methods (like, by means of Fourier transform or SVD), which is
+quality, color spectrum. Perhaps, there are other characteristics of a photo, but most probably all of them
+may be assessed with some traditional numeric methods (like, by means of Fourier transform or SVD), which is
 less challenging. In contrast, the assessment of semantics is at the cutting edge of today's Computer
 vision technology - it is the most challenging sub-task.
 
@@ -48,6 +48,12 @@ be able to process images of arbitrary size, but currently available version wor
 so there is a default preprocessing in the model - the largest central square patch is taken out of a picture
 and then resolution is reduced to 224x224, thus it is not able to reliably estimate composition and image
 quality. But any more ambitious solution would be of production-level complexity.
+
+Most plausible reason for CLIP model requiring fixed photo shape is that it uses learnable positional
+embeddings. Perhaps, in the nearest future a model with closed-form positional embeddings will appear.
+And that would unleash a huge potential to process photos with arbitrary rectangular shape. Something
+similar has already happened in LLM, where [sinusoidal positional embeddings](https://arxiv.org/abs/1706.03762) allow LLMs to work with texts
+of any sensible length.
 
 ## How to test a model
 One needs to clone a repo, `cd` to it's root and run
