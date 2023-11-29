@@ -27,7 +27,7 @@ It has 2 major components:
 2. picture encoder
 
 Each component is meant to build an embedding of its input modality. And the crucial thing here that those
-embeddings should exist in the same space, so cosine distance would make sence. This unification of text
+embeddings should exist in the same space, so cosine distance would make sense. This unification of text
 and images allowed to train CLIP in semi-supervised manner on a huge collection of data producing a
 general-purpose pre-trained model.
 
